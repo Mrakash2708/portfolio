@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Film Editing — Akash Sahu | Cinematic Wedding Videography</title>
+  <meta name="description" content="Cinematic wedding film editing by Akash Sahu. Emotional storytelling, stunning color grading, and beautiful sound design for your most important day. Highlight reels, full-length films & same-day edits.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wedding Film Editing — Akash Sahu">
+  <meta property="og:description" content="Cinematic wedding film editing. Emotional storytelling, stunning color grading. Highlight reels, full films & same-day edits.">
+  <meta property="og:image" content="profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Wedding color overrides -->
+  <style>
+    :root {
+      --accent:      #D4A574;
+      --accent-glow: rgba(212, 165, 116, .15);
+      --accent-deep: #b8894e;
+    }
+    /* Rose-tinted orbs for hero visual */
+    .hero-visual-orb.orb-1 { background: #D4A574; }
+    .hero-visual-orb.orb-2 { background: #c084aa; }
+    .hero-visual-orb.orb-3 { background: #e07090; }
+
+    /* NLE preview gradient in warm tones */
+    .nle-preview-gradient {
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(212,165,116,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 40%, rgba(192,100,130,0.08) 0%, transparent 50%),
+        linear-gradient(180deg, rgba(212,165,116,0.03) 0%, transparent 100%);
+    }
+    .nle-preview-play { filter: drop-shadow(0 0 12px rgba(212,165,116,0.6)); }
+    .clip-green {
+      background: linear-gradient(90deg, rgba(212,165,116,0.65), rgba(212,165,116,0.35));
+      box-shadow: 0 0 4px rgba(212,165,116,0.15);
+    }
+    .clip-waveform {
+      background: repeating-linear-gradient(90deg,
+        rgba(212,165,116,0.45) 0px, rgba(212,165,116,0.45) 1px,
+        transparent 1px, transparent 3px
+      );
+      border: 1px solid rgba(212,165,116,0.12);
+    }
+    .nle-playhead { background: #D4A574; box-shadow: 0 0 8px rgba(212,165,116,0.5), 0 0 16px rgba(212,165,116,0.2); }
+    .nle-playhead::before { background: #D4A574; }
+
+    /* Nav CTA */
+    .nav-cta { background: #D4A574; }
+
+    /* Process hover */
+    .process-step:hover {
+      border-color: rgba(212, 165, 116, .3);
+      box-shadow: 0 10px 30px rgba(212, 165, 116, 0.05), inset 0 1px 0 rgba(255,255,255,.04);
+    }
+
+    /* Portfolio hover */
+    .portfolio-item:hover {
+      border-color: rgba(212, 165, 116, .3);
+      box-shadow: 0 15px 30px rgba(212, 165, 116, 0.1);
+    }
+    .yt-thumbnail-wrapper:hover .yt-play-btn { background: #D4A574; }
+
+    /* Contact glow */
+    .contact::before { background: radial-gradient(circle, rgba(212,165,116,0.12) 0%, transparent 60%); }
+
+    /* Footer socials hover */
+    .footer-socials a:hover {
+      color: #D4A574;
+      background: rgba(212,165,116,0.1);
+      border-color: rgba(212,165,116,.2);
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-left: 1rem;
+      transition: color .3s;
+    }
+    .back-link:hover { color: var(--text-primary); }
+
+    /* Wedding-specific: cinematic quote block */
+    .wedding-quote {
+      text-align: center;
+      padding: var(--section-py) 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .wedding-quote blockquote {
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: -.01em;
+      color: var(--text-secondary);
+      max-width: 60ch;
+      margin: 0 auto;
+      font-style: italic;
+    }
+    .wedding-quote blockquote span { color: var(--accent); font-weight: 600; font-style: normal; }
+
+    /* Package badge */
+    .pkg-badge {
+      display: inline-block;
+      padding: .2rem .6rem;
+      border-radius: var(--radius-pill);
+      background: rgba(212,165,116,.1);
+      border: 1px solid rgba(212,165,116,.2);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .75rem;
+    }
+
+    /* Contact form */
+    .contact-form {
+      max-width: 560px;
+      margin: 3rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .form-field label {
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--text-muted);
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: .85rem 1rem;
+      font-family: inherit;
+      font-size: .9rem;
+      color: var(--text-primary);
+      transition: border-color .3s;
+      width: 100%;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .form-field select { appearance: none; cursor: pointer; }
+    .form-field textarea { resize: vertical; min-height: 120px; }
+    .form-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: 1rem 2rem;
+      border-radius: var(--radius-pill);
+      background: var(--accent);
+      color: var(--bg-deep);
+      font-weight: 700;
+      font-size: .95rem;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: transform .35s var(--ease-spring), box-shadow .35s var(--ease-spring);
+      margin-top: .5rem;
+    }
+    .form-submit:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(212,165,116,.35);
+    }
+    @media (max-width: 560px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav-island" id="nav">
+    <div class="nav-logo">Akash<span>.</span></div>
+    <a href="index.html" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      All Services
+    </a>
+    <div class="nav-links">
+      <a href="#films">Films</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <a href="#contact" class="nav-cta">Book Now</a>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">← All Services</a>
+    <a href="#films">Films</a>
+    <a href="#process">Process</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero container" id="hero">
+    <div class="hero-content">
+      <div class="eyebrow reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        Wedding Film Editing
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        <span class="line">Your Story.</span>
+        <span class="line">Told <span class="accent">Forever.</span></span>
+      </h1>
+      <p class="hero-subtitle reveal reveal-delay-2">
+        Cinematic wedding film editing that captures every emotion, every glance, every tear of joy — crafted into a film you'll watch for the rest of your lives.
+      </p>
+      <div class="hero-stats reveal reveal-delay-3">
+        <div>
+          <div class="hero-stat-number" data-count="180" data-suffix="+">0</div>
+          <div class="hero-stat-label">Weddings Edited</div>
+        </div>
+        <div>
+          <div class="hero-stat-number" data-count="5" data-suffix=" yrs">0</div>
+          <div class="hero-stat-label">Experience</div>
+        </div>
+        <div>
+          <div class="hero-stat-number" data-count="4" data-prefix="" data-suffix=".9★">0</div>
+          <div class="hero-stat-label">Average Rating</div>
+        </div>
+      </div>
+      <div class="hero-actions reveal reveal-delay-4">
+        <a href="#contact" class="btn-primary">
+          Book My Date
+          <span class="btn-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </span>
+        </a>
+        <a href="#films" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          Watch Films
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-visual-wrapper">
+        <div class="hero-visual-orb orb-1"></div>
+        <div class="hero-visual-orb orb-2"></div>
+        <div class="hero-visual-orb orb-3"></div>
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="hero-card-img hero-nle-graphic">
+            <div class="nle-preview">
+              <div class="nle-preview-screen">
+                <div class="nle-preview-gradient"></div>
+                <svg class="nle-preview-play" viewBox="0 0 24 24" fill="#D4A574"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+              <div class="nle-preview-label">PREVIEW</div>
+            </div>
+            <div class="nle-tracks">
+              <div class="nle-track">
+                <span class="nle-track-label">V2</span>
+                <div class="nle-clip clip-green clip-short" style="width:40%;margin-left:5%"></div>
+                <div class="nle-clip clip-teal clip-short" style="width:25%;margin-left:3%"></div>
+              </div>
+              <div class="nle-track">
+                <span class="nle-track-label">V1</span>
+                <div class="nle-clip clip-green" style="width:30%;margin-left:0%"></div>
+                <div class="nle-clip clip-purple" style="width:28%;margin-left:4%"></div>
+                <div class="nle-clip clip-green clip-short" style="width:20%;margin-left:3%"></div>
+              </div>
+              <div class="nle-track">
+                <span class="nle-track-label">A1</span>
+                <div class="nle-clip clip-waveform" style="width:85%;margin-left:0%"></div>
+              </div>
+              <div class="nle-track">
+                <span class="nle-track-label">A2</span>
+                <div class="nle-clip clip-waveform clip-waveform-alt" style="width:60%;margin-left:10%"></div>
+              </div>
+              <div class="nle-playhead"></div>
+            </div>
+          </div>
+          <div class="hero-card-timeline">
+            <div class="timeline-bar"><div class="timeline-progress" style="background: #D4A574;"></div></div>
+          </div>
+          <div class="hero-card-tools">
+            <span class="tool-tag">DaVinci Resolve</span>
+            <span class="tool-tag">Premiere Pro</span>
+            <span class="tool-tag">After Effects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SHOWREEL ==================== -->
+  <section class="showreel-section" id="films">
+    <div class="container reveal">
+      <div class="showreel-container">
+        <iframe src="https://player.vimeo.com/video/895341088?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUOTE ==================== -->
+  <section class="wedding-quote">
+    <div class="container">
+      <blockquote class="reveal">
+        "Every frame is a memory. Every cut is a feeling.
+        <span>Your wedding film should make you cry every time you watch it.</span>"
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ==================== MARQUEE ==================== -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+        180+ Wedding Films Delivered
+      </div>
+      <span class="marquee-divider">/</span>
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        Cinematic Color Grading
+      </div>
+      <span class="marquee-divider">/</span>
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        7-Day Delivery
+      </div>
+      <span class="marquee-divider">/</span>
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        Fiverr Top Rated
+      </div>
+      <span class="marquee-divider">/</span>
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        DaVinci Resolve & Premiere Pro
+      </div>
+      <span class="marquee-divider">/</span>
+      <!-- Duplicate -->
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+        180+ Wedding Films Delivered
+      </div>
+      <span class="marquee-divider">/</span>
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        Cinematic Color Grading
+      </div>
+      <span class="marquee-divider">/</span>
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        7-Day Delivery
+      </div>
+      <span class="marquee-divider">/</span>
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        Fiverr Top Rated
+      </div>
+      <span class="marquee-divider">/</span>
+      <div class="marquee-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        DaVinci Resolve & Premiere Pro
+      </div>
+      <span class="marquee-divider">/</span>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section class="services container" id="services">
+    <div class="section-header">
+      <div class="eyebrow reveal">What You'll Receive</div>
+      <h2 class="section-title reveal reveal-delay-1">Every package, a<br><span style="color:var(--accent)">timeless film</span></h2>
+      <p class="section-subtitle reveal reveal-delay-2">From 3-minute highlights to full-length feature films — each edit is crafted with the same cinematic care and emotional sensitivity.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Highlight Film (large) -->
+      <div class="service-card large reveal">
+        <div class="service-card-bg" style="background-image: url('images/service_wedding.png');"></div>
+        <div class="service-icon" style="background:rgba(212,165,116,.12);color:#D4A574;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
+        <h3 class="service-title">Highlight Reel</h3>
+        <p class="service-description">
+          A 3–5 minute cinematic highlight film — the essential story of your day. Perfectly timed to music, color graded to perfection, and designed to be shared everywhere. This is the film that will make your guests cry.
+        </p>
+        <div class="service-features">
+          <span class="service-feature-tag">3–5 Min Film</span>
+          <span class="service-feature-tag">Music Sync</span>
+          <span class="service-feature-tag">Cinematic Grade</span>
+          <span class="service-feature-tag">Drone Integration</span>
+          <span class="service-feature-tag">Social Formats</span>
+          <span class="service-feature-tag">Subtitles Optional</span>
+        </div>
+      </div>
+
+      <!-- Full Film -->
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-card-bg" style="background-image: url('images/service_vlog.png');"></div>
+        <div class="service-icon" style="background:rgba(192,100,130,.12);color:#c084aa;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+          </svg>
+        </div>
+        <h3 class="service-title">Full-Length Film</h3>
+        <p class="service-description">
+          A 20–60 minute documentary-style film capturing every ceremony moment, speech, and reception memory in full.
+        </p>
+        <div class="service-features">
+          <span class="service-feature-tag">20–60 Min</span>
+          <span class="service-feature-tag">Ceremony Coverage</span>
+          <span class="service-feature-tag">Speeches</span>
+        </div>
+      </div>
+
+      <!-- Same-Day Edit -->
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-card-bg" style="background-image: url('images/service_reels.png');"></div>
+        <div class="service-icon" style="background:rgba(220,130,80,.12);color:#e07090;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <h3 class="service-title">Same-Day Edit</h3>
+        <p class="service-description">
+          A 2–3 minute edit delivered on your wedding day itself — played at the reception for an unforgettable moment.
+        </p>
+        <div class="service-features">
+          <span class="service-feature-tag">Day-Of Delivery</span>
+          <span class="service-feature-tag">Reception Screening</span>
+          <span class="service-feature-tag">Teaser Reel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO ==================== -->
+  <section class="portfolio container" id="portfolio">
+    <div class="section-header">
+      <div class="eyebrow reveal">Selected Films</div>
+      <h2 class="section-title reveal reveal-delay-1">Real Weddings,<br><span style="color:var(--accent)">Real Emotion</span></h2>
+      <p class="section-subtitle reveal reveal-delay-2">Each film is completely unique — shaped by the couple, the location, and the story only they can tell.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item reveal">
+        <iframe src="https://player.vimeo.com/video/895341088" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="portfolio-item reveal reveal-delay-1">
+        <iframe src="https://player.vimeo.com/video/950364816" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="portfolio-item reveal reveal-delay-2">
+        <a href="https://www.youtube.com/watch?v=IF19DSwY68c" target="_blank" class="yt-thumbnail-wrapper">
+          <img src="https://i.ytimg.com/vi/IF19DSwY68c/maxresdefault.jpg" alt="Cinematic wedding highlight reel" class="yt-thumbnail" width="1280" height="720" loading="lazy">
+          <div class="yt-play-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROCESS ==================== -->
+  <section class="process container" id="process">
+    <div class="section-header">
+      <div class="eyebrow reveal">The Process</div>
+      <h2 class="section-title reveal reveal-delay-1">Simple, stress-free,<br><span style="color:var(--accent)">beautiful results</span></h2>
+      <p class="section-subtitle reveal reveal-delay-2">You've got enough to plan. Your editing process should be the easy part.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-number">01</div>
+        <h3 class="process-title">Share Your Footage</h3>
+        <p class="process-desc">Send your raw footage via Google Drive or WeTransfer, along with a few notes — favourite moments, the vibe you want, any must-have songs.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="process-number">02</div>
+        <h3 class="process-title">Story Assembly</h3>
+        <p class="process-desc">I watch everything carefully and build the emotional arc of your day — ceremony, vows, first look, speeches, dancing — into a compelling narrative.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="process-number">03</div>
+        <h3 class="process-title">Colour & Sound</h3>
+        <p class="process-desc">Cinematic colour grading, music licensing or your chosen song, sound design and audio balancing to make every moment feel alive.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="process-number">04</div>
+        <h3 class="process-title">Your Film, Delivered</h3>
+        <p class="process-desc">You receive a private link to review. We do up to 3 rounds of revisions until it feels exactly right — then your final film is yours forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING ==================== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow reveal">Packages</div>
+        <h2 class="section-title reveal reveal-delay-1">Honest pricing for<br>your most important day</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Every package includes cinematic colour grading, licensed music, and a private review link. No hidden costs.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Highlight -->
+        <div class="pricing-card-outer reveal">
+          <div class="pricing-card">
+            <div class="pkg-badge">Highlight</div>
+            <div class="pricing-tier">Most Popular</div>
+            <div class="pricing-price"><sup>$</sup>180</div>
+            <p class="pricing-desc">A stunning 3–5 minute highlight reel. Perfect for sharing on social media and reliving the day.</p>
+            <div class="pricing-divider"></div>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                3–5 min cinematic highlight
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Up to 6 hrs raw footage
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Cinematic colour grade
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Licensed music or your song
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                3 revisions
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                7-day delivery
+              </div>
+            </div>
+            <a href="#contact" class="pricing-cta">Book This Package</a>
+          </div>
+        </div>
+
+        <!-- Full Film (Featured) -->
+        <div class="pricing-card-outer featured reveal reveal-delay-1">
+          <div class="pricing-card">
+            <div class="pkg-badge">Complete</div>
+            <div class="pricing-tier">Best Value</div>
+            <div class="pricing-price"><sup>$</sup>320</div>
+            <p class="pricing-desc">Highlight reel + full-length film. Everything from first look to last dance, beautifully preserved.</p>
+            <div class="pricing-divider"></div>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                3–5 min highlight reel
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                20–40 min full film
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Full ceremony & speeches
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Drone footage integration
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Unlimited revisions
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                10-day delivery
+              </div>
+            </div>
+            <a href="#contact" class="pricing-cta">Book This Package</a>
+          </div>
+        </div>
+
+        <!-- Premium -->
+        <div class="pricing-card-outer reveal reveal-delay-2">
+          <div class="pricing-card">
+            <div class="pkg-badge">Premium</div>
+            <div class="pricing-tier">All Inclusive</div>
+            <div class="pricing-price"><sup>$</sup>480</div>
+            <p class="pricing-desc">Everything in Complete, plus a same-day edit screened at your reception and a social media teaser reel.</p>
+            <div class="pricing-divider"></div>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Everything in Complete
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Same-day edit for reception
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Instagram/TikTok reel
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Full-length up to 60 min
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Priority delivery
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Dedicated WhatsApp support
+              </div>
+            </div>
+            <a href="#contact" class="pricing-cta">Book This Package</a>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:2rem;font-size:.85rem;color:var(--text-muted);">
+        Need something custom? <a href="#contact" style="color:var(--accent);">Send me a message</a> — I'm happy to build a package around your footage and vision.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS ==================== -->
+  <section class="reviews container" id="reviews">
+    <div class="reviews-header">
+      <div>
+        <div class="eyebrow reveal">Kind Words</div>
+        <h2 class="section-title reveal reveal-delay-1">What couples say</h2>
+      </div>
+      <div class="reviews-rating reveal reveal-delay-2">
+        <div class="stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+        </div>
+        4.9/5 from 1,027+ reviews
+      </div>
+    </div>
+
+    <div class="reviews-marquee-container">
+      <div class="reviews-scroll" id="reviews-track">
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"We watched our highlight reel at least 20 times the first week. Akash captured moments we didn't even know were filmed. Absolutely magical."</p>
+          <div class="review-author">
+            <div class="review-avatar av-1">S</div>
+            <div>
+              <div class="review-name">Sarah & James</div>
+              <div class="review-source">Wedding Film · United States</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"A pleasure to work with, he really understands my needs and crafts a wonderful video with a lot of creativity and technical skill."</p>
+          <div class="review-author">
+            <div class="review-avatar av-7">T</div>
+            <div>
+              <div class="review-name">timeless_ph_vid</div>
+              <div class="review-source">Fiverr · Italy</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"My parents cried watching the highlight film at the reception. That alone made it worth every penny. Akash is exceptional."</p>
+          <div class="review-author">
+            <div class="review-avatar av-3">M</div>
+            <div>
+              <div class="review-name">Maria & Carlos</div>
+              <div class="review-source">Wedding Film · Spain</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"Akash is super professional, fast and fun to work with. The results are amazing and perfect!"</p>
+          <div class="review-author">
+            <div class="review-avatar av-4">N</div>
+            <div>
+              <div class="review-name">niv_ka</div>
+              <div class="review-source">Fiverr · Israel</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"We sent over 8 hours of footage and Akash turned it into a 4-minute film that perfectly captured our day. Better than I imagined."</p>
+          <div class="review-author">
+            <div class="review-avatar av-9">L</div>
+            <div>
+              <div class="review-name">Laura & Ben</div>
+              <div class="review-source">Wedding Film · United Kingdom</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"Thanks for the great work. Efficient, high-quality, and professional as always."</p>
+          <div class="review-author">
+            <div class="review-avatar av-9">S</div>
+            <div>
+              <div class="review-name">stv10rupperswil</div>
+              <div class="review-source">Fiverr · Switzerland</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicates for seamless loop -->
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"We watched our highlight reel at least 20 times the first week. Akash captured moments we didn't even know were filmed. Absolutely magical."</p>
+          <div class="review-author">
+            <div class="review-avatar av-1">S</div>
+            <div>
+              <div class="review-name">Sarah & James</div>
+              <div class="review-source">Wedding Film · United States</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"A pleasure to work with, he really understands my needs and crafts a wonderful video with a lot of creativity and technical skill."</p>
+          <div class="review-author">
+            <div class="review-avatar av-7">T</div>
+            <div>
+              <div class="review-name">timeless_ph_vid</div>
+              <div class="review-source">Fiverr · Italy</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"My parents cried watching the highlight film at the reception. That alone made it worth every penny. Akash is exceptional."</p>
+          <div class="review-author">
+            <div class="review-avatar av-3">M</div>
+            <div>
+              <div class="review-name">Maria & Carlos</div>
+              <div class="review-source">Wedding Film · Spain</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"Akash is super professional, fast and fun to work with. The results are amazing and perfect!"</p>
+          <div class="review-author">
+            <div class="review-avatar av-4">N</div>
+            <div>
+              <div class="review-name">niv_ka</div>
+              <div class="review-source">Fiverr · Israel</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"We sent over 8 hours of footage and Akash turned it into a 4-minute film that perfectly captured our day. Better than I imagined."</p>
+          <div class="review-author">
+            <div class="review-avatar av-9">L</div>
+            <div>
+              <div class="review-name">Laura & Ben</div>
+              <div class="review-source">Wedding Film · United Kingdom</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>
+          </div>
+          <p class="review-text">"Thanks for the great work. Efficient, high-quality, and professional as always."</p>
+          <div class="review-author">
+            <div class="review-avatar av-9">S</div>
+            <div>
+              <div class="review-name">stv10rupperswil</div>
+              <div class="review-source">Fiverr · Switzerland</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="eyebrow reveal">Ready to begin?</div>
+        <h2 class="contact-title reveal reveal-delay-1">Tell me about<br><span style="color:var(--accent)">your wedding</span></h2>
+        <p class="contact-subtitle reveal reveal-delay-2">Every wedding is different. Share a few details and I'll get back to you within a few hours.</p>
+
+        <form class="contact-form reveal reveal-delay-3" action="mailto:mrakashsahu2708@gmail.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane & John Smith" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="date">Wedding Date</label>
+              <input type="date" id="date" name="wedding_date">
+            </div>
+            <div class="form-field">
+              <label for="package">Package Interest</label>
+              <select id="package" name="package">
+                <option value="">Select a package…</option>
+                <option value="highlight">Highlight — $180</option>
+                <option value="complete">Complete — $320</option>
+                <option value="premium">Premium — $480</option>
+                <option value="custom">Custom / Not Sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">Tell me about your day</label>
+            <textarea id="message" name="message" placeholder="Where is the wedding? What style are you going for? Any must-have moments or songs?"></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Send Enquiry
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+
+        <div class="contact-links reveal reveal-delay-4">
+          <a href="https://www.fiverr.com/akashsahu128" target="_blank" rel="noopener" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            Order on Fiverr
+          </a>
+          <a href="mailto:mrakashsahu2708@gmail.com" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            mrakashsahu2708@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-copy">
+          &copy; 2026 Akash Sahu. All rights reserved. &nbsp;·&nbsp;
+          <a href="index.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:3px;">View All Services</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.fiverr.com/akashsahu128" target="_blank" rel="noopener" aria-label="Fiverr">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          </a>
+          <a href="mailto:mrakashsahu2708@gmail.com" aria-label="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
